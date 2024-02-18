@@ -101,6 +101,8 @@ class SettingPlayerTemp : Listener {
                     }
 
                     bossBar.setTitle("§b온도 §e${temp}°C")
+
+                    if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main)
                 }
             }
         }

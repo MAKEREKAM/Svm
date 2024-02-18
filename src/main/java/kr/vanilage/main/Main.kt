@@ -13,10 +13,13 @@ class Main : JavaPlugin(), Listener {
         val playerTemp = HashMap<UUID, Double>()
         val playerFatigue = HashMap<UUID, Double>()
         val random = Random()
+        lateinit var instance : Main
     }
 
     override fun onEnable() {
         Bukkit.getConsoleSender().sendMessage("Hello, World!")
+
+        instance = this
 
         Bukkit.getPluginManager().registerEvents(SettingPlayerTemp(), this)
 
