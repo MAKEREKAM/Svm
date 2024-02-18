@@ -86,7 +86,8 @@ class SettingPlayerTemp : Listener {
         arrayOf(
             EntityType.MAGMA_CUBE,
             EntityType.BLAZE,
-            EntityType.GHAST
+            EntityType.GHAST,
+            EntityType.PRIMED_TNT
         )
 
     val randomIncreaseTempEntity =
