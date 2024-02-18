@@ -105,7 +105,7 @@ class SettingPlayerTemp : Listener {
                         bossBar.progress = (temp - 35) / 5
                     }
 
-                    bossBar.setTitle("§b온도 §e${temp}°C")
+                    bossBar.setTitle(String.format("§b온도 §e%.1f°C", Main.playerTemp[player.uniqueId]))
 
                     if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main.instance, this, 1)
                 }
