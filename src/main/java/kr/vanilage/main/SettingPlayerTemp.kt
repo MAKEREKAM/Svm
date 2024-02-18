@@ -88,6 +88,11 @@ class SettingPlayerTemp : Listener {
                         bossBar.color = BarColor.RED
                         player.freezeTicks = 5
                     }
+
+                    if (temp >= 40) {
+                        bossBar.color = BarColor.RED
+                        player.fireTicks = 5
+                    }
                 }
             }
         }
