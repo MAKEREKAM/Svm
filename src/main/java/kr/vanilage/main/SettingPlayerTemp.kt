@@ -151,7 +151,6 @@ class SettingPlayerTemp : Listener {
                 Material.FROSTED_ICE,
                 Material.END_PORTAL,
                 Material.END_GATEWAY,
-                Material.WATER
             )
 
         private val increaseTempEntity =
