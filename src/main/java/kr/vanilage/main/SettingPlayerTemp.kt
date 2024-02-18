@@ -38,14 +38,14 @@ class SettingPlayerTemp : Listener {
         }
     }
 
-    val increaseTempBlock =
+    private val increaseTempBlock =
         arrayOf(
             Material.LAVA,
             Material.SOUL_CAMPFIRE,
             Material.SOUL_FIRE
         )
 
-    val randomIncreaseTempBlock =
+    private val randomIncreaseTempBlock =
         arrayOf(
             Material.CAMPFIRE,
             Material.FIRE,
@@ -64,7 +64,7 @@ class SettingPlayerTemp : Listener {
             Material.SOUL_LANTERN
         )
 
-    val decreaseTempBlock =
+    private val decreaseTempBlock =
         arrayOf(
             Material.PACKED_ICE,
             Material.BLUE_ICE,
@@ -73,7 +73,7 @@ class SettingPlayerTemp : Listener {
             Material.WET_SPONGE
         )
 
-    val randomDecreaseTempBlock =
+    private val randomDecreaseTempBlock =
         arrayOf(
             Material.SNOW,
             Material.SNOW_BLOCK,
@@ -83,7 +83,7 @@ class SettingPlayerTemp : Listener {
             Material.END_GATEWAY
         )
 
-    val increaseTempEntity =
+    private val increaseTempEntity =
         arrayOf(
             EntityType.MAGMA_CUBE,
             EntityType.BLAZE,
@@ -93,7 +93,7 @@ class SettingPlayerTemp : Listener {
             EntityType.WITHER
         )
 
-    val randomIncreaseTempEntity =
+    private val randomIncreaseTempEntity =
         arrayOf(
             EntityType.HUSK,
             EntityType.FIREBALL,
@@ -101,13 +101,13 @@ class SettingPlayerTemp : Listener {
             EntityType.CREEPER
         )
 
-    val decreaseTempEntity =
+    private val decreaseTempEntity =
         arrayOf(
             EntityType.SNOWMAN,
             EntityType.SNOWBALL
         )
 
-    val randomDecreaseTempEntity =
+    private val randomDecreaseTempEntity =
         arrayOf(
             EntityType.COD,
             EntityType.SALMON,
@@ -119,7 +119,7 @@ class SettingPlayerTemp : Listener {
             EntityType.DROWNED
         )
 
-    val increaseTempBiome =
+    private val increaseTempBiome =
         arrayOf(
             Biome.DESERT,
             Biome.BADLANDS,
@@ -132,7 +132,7 @@ class SettingPlayerTemp : Listener {
             Biome.SAVANNA_PLATEAU
         )
 
-    val decreaseTempBiome =
+    private val decreaseTempBiome =
         arrayOf(
             Biome.SNOWY_TAIGA,
             Biome.SNOWY_PLAINS,
