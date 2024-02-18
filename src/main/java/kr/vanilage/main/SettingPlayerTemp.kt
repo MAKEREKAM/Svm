@@ -86,7 +86,7 @@ class SettingPlayerTemp : Listener {
 
                     if (temp <= 35) {
                         bossBar.color = BarColor.RED
-                        player.freezeTicks = 100
+                        player.freezeTicks = 200
                         bossBar.progress = 0.0
                     }
 
