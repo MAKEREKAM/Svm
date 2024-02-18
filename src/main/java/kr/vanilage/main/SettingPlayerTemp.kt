@@ -87,7 +87,9 @@ class SettingPlayerTemp : Listener {
             EntityType.MAGMA_CUBE,
             EntityType.BLAZE,
             EntityType.GHAST,
-            EntityType.PRIMED_TNT
+            EntityType.PRIMED_TNT,
+            EntityType.WITHER_SKELETON,
+            EntityType.WITHER
         )
 
     val randomIncreaseTempEntity =
@@ -112,6 +114,7 @@ class SettingPlayerTemp : Listener {
             EntityType.ELDER_GUARDIAN,
             EntityType.GUARDIAN,
             EntityType.DOLPHIN,
-            EntityType.TURTLE
+            EntityType.TURTLE,
+            EntityType.DROWNED
         )
 }
