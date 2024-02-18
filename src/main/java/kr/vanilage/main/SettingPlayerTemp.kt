@@ -94,6 +94,7 @@ class SettingPlayerTemp : Listener {
         arrayOf(
             EntityType.HUSK,
             EntityType.FIREBALL,
-            EntityType.SMALL_FIREBALL
+            EntityType.SMALL_FIREBALL,
+            EntityType.CREEPER
         )
 }
