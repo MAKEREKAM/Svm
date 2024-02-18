@@ -36,21 +36,27 @@ class SettingPlayerTemp : Listener {
                                 if (randomIncreaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    if (Main.random.nextInt(3) == 0) change += 0.05
+                                    if (Main.random.nextInt(3) == 0) change += 0.01
                                 }
 
                                 if (decreaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    change -= 0.05
+                                    change -= 0.01
                                 }
 
                                 if (randomDecreaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    if (Main.random.nextInt(3) == 0) change -= 0.05
+                                    if (Main.random.nextInt(3) == 0) change -= 0.01
                                 }
                             }
+                        }
+                    }
+
+                    player.getNearbyEntities(1.5, 1.5, 1.5).forEach {
+                        if (increaseTempEntity.contains(it.type) {
+                            change +=
                         }
                     }
                 }
