@@ -129,4 +129,13 @@ class SettingPlayerTemp : Listener {
             Biome.SPARSE_JUNGLE,
             Biome.BAMBOO_JUNGLE
         )
+
+    val decreaseTempBiome =
+        arrayOf(
+            Biome.SNOWY_TAIGA,
+            Biome.SNOWY_PLAINS,
+            Biome.SNOWY_BEACH,
+            Biome.SNOWY_SLOPES,
+            Biome.FROZEN_PEAKS
+        )
 }
