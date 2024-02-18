@@ -52,7 +52,9 @@ class SettingPlayerTemp : Listener {
             Material.SOUL_WALL_TORCH,
             Material.SPAWNER,
             Material.MAGMA_BLOCK,
-            Material.NETHER_PORTAL
+            Material.NETHER_PORTAL,
+            Material.REDSTONE_TORCH,
+            Material.REDSTONE_WALL_TORCH
         )
 
     val decreaseTempBlock =
