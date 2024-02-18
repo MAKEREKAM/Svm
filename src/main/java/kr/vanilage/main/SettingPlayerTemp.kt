@@ -87,11 +87,17 @@ class SettingPlayerTemp : Listener {
                     if (temp <= 35) {
                         bossBar.color = BarColor.RED
                         player.freezeTicks = 5
+                        bossBar.progress = 0.0
                     }
 
-                    if (temp >= 40) {
+                    else if (temp >= 40) {
                         bossBar.color = BarColor.RED
                         player.fireTicks = 5
+                        bossBar.progress = 1.0
+                    }
+
+                    else {
+                        bossBar.progress = temp / 5
                     }
 
                     bossBar.setTitle("§b온도 §e${temp}°C")
