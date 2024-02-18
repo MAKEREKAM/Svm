@@ -2,6 +2,7 @@ package kr.vanilage.main
 
 import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.block.Biome
 import org.bukkit.block.Furnace
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
@@ -116,5 +117,16 @@ class SettingPlayerTemp : Listener {
             EntityType.DOLPHIN,
             EntityType.TURTLE,
             EntityType.DROWNED
+        )
+
+    val increaseTempBiome =
+        arrayOf(
+            Biome.DESERT,
+            Biome.BADLANDS,
+            Biome.WOODED_BADLANDS,
+            Biome.ERODED_BADLANDS,
+            Biome.JUNGLE,
+            Biome.SPARSE_JUNGLE,
+            Biome.BAMBOO_JUNGLE
         )
 }
