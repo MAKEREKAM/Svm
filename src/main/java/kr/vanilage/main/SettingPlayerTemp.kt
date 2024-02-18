@@ -2,6 +2,7 @@ package kr.vanilage.main
 
 import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.block.Furnace
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
 import org.bukkit.entity.Player
@@ -34,10 +35,22 @@ class SettingPlayerTemp : Listener {
         }
     }
 
-    val increaseTemp =
+    val increaseTempBlock =
         arrayOf(
             Material.LAVA,
             Material.SOUL_CAMPFIRE,
             Material.SOUL_FIRE
+        )
+
+    val randomIncreaseTempBlock =
+        arrayOf(
+            Material.CAMPFIRE,
+            Material.FIRE,
+            Material.TORCH,
+            Material.SOUL_TORCH,
+            Material.WALL_TORCH,
+            Material.SOUL_WALL_TORCH,
+            Material.SPAWNER,
+            Material.MAGMA_BLOCK
         )
 }
