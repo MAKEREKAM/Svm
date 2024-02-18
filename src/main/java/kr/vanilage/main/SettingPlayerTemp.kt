@@ -24,16 +24,16 @@ class SettingPlayerTemp : Listener {
 
             val computeTemp = object : Runnable {
                 override fun run() {
-                    var change = 0
+                    var change = 0.0
 
                     for (x in -3..3) {
                         for (y in -3..3) {
                             for (z in -3..3) {
-                                if (
-                                    increaseTempBlock.contains(
-                                        player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type
-                                    )
-                                )
+                                if (increaseTempBlock.contains(
+                                        player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
+
+                                    change += 0.05
+                                }
                             }
                         }
                     }
