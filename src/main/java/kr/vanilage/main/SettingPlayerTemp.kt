@@ -136,6 +136,7 @@ class SettingPlayerTemp : Listener {
             Biome.SNOWY_PLAINS,
             Biome.SNOWY_BEACH,
             Biome.SNOWY_SLOPES,
-            Biome.FROZEN_PEAKS
+            Biome.FROZEN_PEAKS,
+            Biome.ICE_SPIKES
         )
 }
