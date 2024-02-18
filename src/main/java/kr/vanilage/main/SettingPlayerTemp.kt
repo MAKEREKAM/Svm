@@ -81,6 +81,12 @@ class SettingPlayerTemp : Listener {
                     }
 
                     Main.playerTemp[player.uniqueId] = Main.playerTemp[player.uniqueId]!! + change
+
+                    val temp = Main.playerTemp[player.uniqueId]!!
+
+                    if (temp <= 35) {
+                        bossBar.color = BarColor.RED
+                    }
                 }
             }
         }
