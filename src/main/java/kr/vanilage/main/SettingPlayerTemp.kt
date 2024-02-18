@@ -68,5 +68,7 @@ class SettingPlayerTemp : Listener {
             Material.SNOW,
             Material.POWDER_SNOW,
             Material.FROSTED_ICE,
+            Material.END_PORTAL,
+            Material.END_GATEWAY
         )
 }
