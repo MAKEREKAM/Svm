@@ -50,6 +50,10 @@ class SettingPlayerTemp : Listener {
 
                                     if (Main.random.nextInt(2) == 0) change -= 0.01
                                 }
+
+                                if (player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type == Material.WATER) {
+                                    if (Main.random.nextInt(15) == 0) change -= 0.01
+                                }
                             }
                         }
                     }
