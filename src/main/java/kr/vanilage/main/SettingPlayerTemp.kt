@@ -69,6 +69,7 @@ class SettingPlayerTemp : Listener {
     val randomDecreaseTempBlock =
         arrayOf(
             Material.SNOW,
+            Material.SNOW_BLOCK,
             Material.POWDER_SNOW,
             Material.FROSTED_ICE,
             Material.END_PORTAL,
