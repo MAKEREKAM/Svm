@@ -36,7 +36,7 @@ class SettingPlayerTemp : Listener {
                                 if (randomIncreaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    if (Main.random.nextInt(3) == 0) change += 0.01
+                                    if (Main.random.nextInt(2) == 0) change += 0.01
                                 }
 
                                 if (decreaseTempBlock.contains(
@@ -48,7 +48,7 @@ class SettingPlayerTemp : Listener {
                                 if (randomDecreaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    if (Main.random.nextInt(3) == 0) change -= 0.01
+                                    if (Main.random.nextInt(2) == 0) change -= 0.01
                                 }
                             }
                         }
