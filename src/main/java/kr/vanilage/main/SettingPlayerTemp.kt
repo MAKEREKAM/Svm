@@ -55,8 +55,8 @@ class SettingPlayerTemp : Listener {
                     }
 
                     player.getNearbyEntities(1.5, 1.5, 1.5).forEach {
-                        if (increaseTempEntity.contains(it.type) {
-                            change +=
+                        if (increaseTempEntity.contains(it.type)) {
+                            change += 0.01
                         }
                     }
                 }
