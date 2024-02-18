@@ -53,4 +53,13 @@ class SettingPlayerTemp : Listener {
             Material.SPAWNER,
             Material.MAGMA_BLOCK
         )
+
+    val decreaseTempBlock =
+        arrayOf(
+            Material.PACKED_ICE,
+            Material.BLUE_ICE,
+            Material.ICE,
+            Material.FROSTED_ICE,
+            Material.WATER
+        )
 }
