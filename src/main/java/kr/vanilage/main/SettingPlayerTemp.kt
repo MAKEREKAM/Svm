@@ -62,6 +62,14 @@ class SettingPlayerTemp : Listener {
                         if (randomIncreaseTempEntity.contains(it.type)) {
                             if (Main.random.nextInt(2) == 0) change += 0.01
                         }
+
+                        if (decreaseTempEntity.contains(it.type)) {
+                            change -= 0.01
+                        }
+
+                        if (randomDecreaseTempEntity.contains(it.type)) {
+                            if (Main.random.nextInt(2) == 0) change -= 0.01
+                        }
                     }
                 }
             }
