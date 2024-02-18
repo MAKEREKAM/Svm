@@ -71,6 +71,14 @@ class SettingPlayerTemp : Listener {
                             if (Main.random.nextInt(2) == 0) change -= 0.01
                         }
                     }
+
+                    if (increaseTempBiome.contains(player.location.block.biome)) {
+                        if (Main.random.nextInt(3) == 0) change += 0.01
+                    }
+
+                    if (decreaseTempBiome.contains(player.location.block.biome)) {
+                        if (Main.random.nextInt(3) == 0) change -= 0.01
+                    }
                 }
             }
         }
