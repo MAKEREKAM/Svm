@@ -29,7 +29,11 @@ class SettingPlayerTemp : Listener {
                     for (x in -3..3) {
                         for (y in -3..3) {
                             for (z in -3..3) {
-
+                                if (
+                                    increaseTempBlock.contains(
+                                        player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type
+                                    )
+                                )
                             }
                         }
                     }
