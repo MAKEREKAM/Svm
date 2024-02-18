@@ -97,6 +97,7 @@ class SettingPlayerTemp : Listener {
                     }
 
                     else {
+                        bossBar.color = BarColor.GREEN
                         bossBar.progress = (temp - 35) / 5
                     }
 
