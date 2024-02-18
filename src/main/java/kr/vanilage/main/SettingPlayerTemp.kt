@@ -32,7 +32,13 @@ class SettingPlayerTemp : Listener {
                                 if (increaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
-                                    change += 0.05
+                                    change += 0.01
+                                }
+
+                                if (randomIncreaseTempBlock.contains(
+                                        player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
+
+                                    if (Main.random.nextInt(3) == 0) change += 0.05
                                 }
                             }
                         }
