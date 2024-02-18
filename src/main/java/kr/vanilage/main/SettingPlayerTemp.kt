@@ -127,7 +127,9 @@ class SettingPlayerTemp : Listener {
             Biome.ERODED_BADLANDS,
             Biome.JUNGLE,
             Biome.SPARSE_JUNGLE,
-            Biome.BAMBOO_JUNGLE
+            Biome.BAMBOO_JUNGLE,
+            Biome.SAVANNA,
+            Biome.SAVANNA_PLATEAU
         )
 
     val decreaseTempBiome =
