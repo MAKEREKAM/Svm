@@ -24,9 +24,9 @@ class SettingPlayerTemp : Listener {
                 override fun run() {
                     var change = 0.0
 
-                    for (x in -3..3) {
-                        for (y in -3..3) {
-                            for (z in -3..3) {
+                    for (x in -1..1) {
+                        for (y in -1..1) {
+                            for (z in -1..1) {
                                 if (increaseTempBlock.contains(
                                         player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type)) {
 
