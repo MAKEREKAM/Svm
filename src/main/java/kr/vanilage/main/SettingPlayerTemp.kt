@@ -97,4 +97,10 @@ class SettingPlayerTemp : Listener {
             EntityType.SMALL_FIREBALL,
             EntityType.CREEPER
         )
+
+    val decreaseTempEntity =
+        arrayOf(
+            EntityType.SNOWMAN,
+            EntityType.SNOWBALL
+        )
 }
