@@ -5,6 +5,7 @@ import org.bukkit.Material
 import org.bukkit.block.Furnace
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
+import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
 
@@ -78,5 +79,15 @@ class SettingPlayerTemp : Listener {
             Material.FROSTED_ICE,
             Material.END_PORTAL,
             Material.END_GATEWAY
+        )
+
+    val increaseTempEntity =
+        arrayOf(
+            EntityType.MAGMA_CUBE,
+            EntityType.BLAZE,
+            EntityType.HUSK,
+            EntityType.GHAST,
+            EntityType.FIREBALL,
+            EntityType.SMALL_FIREBALL
         )
 }
