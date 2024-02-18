@@ -103,4 +103,15 @@ class SettingPlayerTemp : Listener {
             EntityType.SNOWMAN,
             EntityType.SNOWBALL
         )
+
+    val randomDecreaseTempEntity =
+        arrayOf(
+            EntityType.COD,
+            EntityType.SALMON,
+            EntityType.TROPICAL_FISH,
+            EntityType.ELDER_GUARDIAN,
+            EntityType.GUARDIAN,
+            EntityType.DOLPHIN,
+            EntityType.TURTLE
+        )
 }
