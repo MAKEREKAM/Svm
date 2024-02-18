@@ -97,7 +97,7 @@ class SettingPlayerTemp : Listener {
                     }
 
                     else {
-                        bossBar.progress = temp / 5
+                        bossBar.progress = (temp - 35) / 5
                     }
 
                     bossBar.setTitle("§b온도 §e${temp}°C")
