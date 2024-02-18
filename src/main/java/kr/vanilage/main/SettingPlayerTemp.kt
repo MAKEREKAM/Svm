@@ -105,6 +105,8 @@ class SettingPlayerTemp : Listener {
                     if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main.instance, this, 1)
                 }
             }
+
+            Bukkit.getScheduler().runTask(Main.instance, computeTemp)
         }
 
         private val increaseTempBlock =
