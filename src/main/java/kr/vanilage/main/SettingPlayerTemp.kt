@@ -1,6 +1,7 @@
 package kr.vanilage.main
 
 import org.bukkit.Bukkit
+import org.bukkit.Material
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
 import org.bukkit.entity.Player
@@ -24,7 +25,7 @@ class SettingPlayerTemp : Listener {
                     for (x in -3..3) {
                         for (y in -3..3) {
                             for (z in -3..3) {
-                                
+
                             }
                         }
                     }
@@ -32,4 +33,11 @@ class SettingPlayerTemp : Listener {
             }
         }
     }
+
+    val increaseTemp =
+        arrayOf(
+            Material.LAVA,
+            Material.SOUL_CAMPFIRE,
+            Material.SOUL_FIRE
+        )
 }
