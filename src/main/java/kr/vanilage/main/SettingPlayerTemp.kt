@@ -94,7 +94,7 @@ class SettingPlayerTemp : Listener {
                         player.fireTicks = 5
                     }
 
-                    bossBar.setTitle("§b온도 §e${Main.playerTemp[player.uniqueId]}°C")
+                    bossBar.setTitle("§b온도 §e${temp}°C")
                 }
             }
         }
