@@ -5,6 +5,7 @@ import org.bukkit.Material
 import org.bukkit.block.Furnace
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
+import org.bukkit.entity.Entity
 import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
@@ -85,8 +86,12 @@ class SettingPlayerTemp : Listener {
         arrayOf(
             EntityType.MAGMA_CUBE,
             EntityType.BLAZE,
+            EntityType.GHAST
+        )
+
+    val randomIncreaseTempEntity =
+        arrayOf(
             EntityType.HUSK,
-            EntityType.GHAST,
             EntityType.FIREBALL,
             EntityType.SMALL_FIREBALL
         )
