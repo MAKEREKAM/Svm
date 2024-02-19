@@ -11,6 +11,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.event.player.PlayerMoveEvent
+import kotlin.math.min
 
 class SettingPlayerFatigue : Listener {
     companion object {
@@ -38,7 +39,7 @@ class SettingPlayerFatigue : Listener {
                             0.0
                         }
 
-                    val point = 50 / (healthScore + foodLevelScore + tempScore)
+                    val point = min(((healthScore + foodLevelScore + tempScore) / 50), 1.0)
 
                     Main.playerFatigue[player.uniqueId] = point
 
