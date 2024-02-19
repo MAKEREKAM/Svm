@@ -40,7 +40,7 @@ class SettingPlayerFatigue : Listener {
 
                     val point = 50 / (healthScore + foodLevelScore + tempScore)
 
-                    bossBar.setTitle(String.format("§b피로도 §e%.1f%", Main.playerFatigue[player.uniqueId]))
+                    bossBar.setTitle(String.format("§b피로도 §e%.1f%", Main.playerFatigue[player.uniqueId]!! * 100))
 
                     if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main.instance, this, 1)
                 }
