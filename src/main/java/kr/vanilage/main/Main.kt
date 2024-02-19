@@ -8,6 +8,7 @@ import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
+import org.bukkit.event.entity.PlayerDeathEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.ShapedRecipe
@@ -48,6 +49,12 @@ class Main : JavaPlugin(), Listener {
         }
 
         SettingPlayerTemp.setTemp(e.player)
+    }
+
+    @EventHandler
+    fun onDeath(e : PlayerDeathEvent) {
+        playerTemp[e.player.uniqueId] = 36.0
+        playerFatigue[e.player.uniqueId] = 0.0
     }
 
     private fun settingRecipe() {
