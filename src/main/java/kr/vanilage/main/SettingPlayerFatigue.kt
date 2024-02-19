@@ -49,7 +49,7 @@ class SettingPlayerFatigue : Listener {
                     if (point >= 0.5) {
                         bossBar.color = BarColor.RED
 
-                        player.walkSpeed = 0.2F - (point / 0.6).toFloat()
+                        player.walkSpeed = 0.2F - (point / 6).toFloat()
                     }
                     else bossBar.color = BarColor.GREEN
 
