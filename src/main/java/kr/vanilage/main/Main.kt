@@ -1,5 +1,7 @@
 package kr.vanilage.main
 
+import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
@@ -45,5 +47,17 @@ class Main : JavaPlugin(), Listener {
         val meta = potionItem.itemMeta
 
         meta.setCustomModelData(12345)
+        meta.displayName(MiniMessage.miniMessage().deserialize(
+            "<red>해열제"
+        ))
+        meta.lore(
+            mutableListOf(
+                MiniMessage.miniMessage().deserialize(
+                    "<yellow>마시면 온도가 1도 낮아집니다."
+                )
+            )
+        )
+
+        potionItem.itemMeta = meta
     }
 }
