@@ -51,6 +51,7 @@ class Main : JavaPlugin(), Listener {
         }
 
         SettingPlayerTemp.setTemp(e.player)
+        SettingPlayerFatigue.setFatigue(e.player)
     }
 
     @EventHandler
