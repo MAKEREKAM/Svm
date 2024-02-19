@@ -33,13 +33,17 @@ class Main : JavaPlugin(), Listener {
 
     @EventHandler
     fun onJoin(e : PlayerJoinEvent) {
-        playerTemp[e.player.uniqueId] = 36.0
-        playerFatigue[e.player.uniqueId] = 0.0
+        if (!playerTemp.containsKey(e.player.uniqueId)) {
+            playerTemp[e.player.uniqueId] = 36.0
+            playerFatigue[e.player.uniqueId] = 0.0
+        }
 
         SettingPlayerTemp.setTemp(e.player)
     }
 
     private fun settingRecipe() {
+        val meta = potionItem.itemMeta
 
+        meta.setCustomModelData(12345)
     }
 }
