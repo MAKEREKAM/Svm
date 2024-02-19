@@ -30,10 +30,10 @@ class SettingPlayerFatigue : Listener {
                     val foodLevelScore = 20 - player.foodLevel
                     val tempScore =
                         if (Main.playerTemp[player.uniqueId]!! >= 38) {
-                            Main.playerTemp[player.uniqueId]!! - 38
+                            (Main.playerTemp[player.uniqueId]!! - 38) * 5
                         }
                         else if (Main.playerTemp[player.uniqueId]!! <= 34) {
-                            34 - Main.playerTemp[player.uniqueId]!!
+                            (34 - Main.playerTemp[player.uniqueId]!!) * 5
                         }
                         else {
                             0.0
