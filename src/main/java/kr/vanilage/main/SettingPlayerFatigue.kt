@@ -46,6 +46,9 @@ class SettingPlayerFatigue : Listener {
                     bossBar.progress = point
                     bossBar.setTitle(String.format("§b피로도 §e%.1f%%", Main.playerFatigue[player.uniqueId]!! * 100))
 
+                    if (point >= 0.5) bossBar.color = BarColor.RED
+                    else bossBar.color = BarColor.GREEN
+
                     if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main.instance, this, 1)
                 }
             }
