@@ -4,10 +4,13 @@ import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.ItemStack
+import org.bukkit.inventory.ShapedRecipe
+import org.bukkit.inventory.ShapelessRecipe
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.Random
 import java.util.UUID
@@ -59,5 +62,13 @@ class Main : JavaPlugin(), Listener {
         )
 
         potionItem.itemMeta = meta
+
+        val recipe = ShapelessRecipe(NamespacedKey(this, "potion"), potionItem)
+
+        recipe.addIngredient(Material.DANDELION)
+        recipe.addIngredient(Material.POPPY)
+        recipe.addIngredient(Material.BOWL)
+
+        Bukkit.addRecipe(recipe)
     }
 }
