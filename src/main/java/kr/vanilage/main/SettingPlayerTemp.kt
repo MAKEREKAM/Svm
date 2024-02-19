@@ -2,6 +2,7 @@ package kr.vanilage.main
 
 import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.World
 import org.bukkit.block.Biome
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
@@ -86,6 +87,14 @@ class SettingPlayerTemp : Listener {
 
                     if (decreaseTempBiome.contains(player.location.block.biome)) {
                         if (Main.random.nextInt(3) == 0) change -= 0.01
+                    }
+
+                    if (player.world.environment == World.Environment.NETHER) {
+                        if (Main.random.nextInt(10) == 0) change += 0.01
+                    }
+
+                    if (player.world.environment == World.Environment.THE_END) {
+                        if (Main.random.nextInt(10) == 0) change -= 0.01
                     }
 
                     Main.playerTemp[player.uniqueId] = Main.playerTemp[player.uniqueId]!! + change
