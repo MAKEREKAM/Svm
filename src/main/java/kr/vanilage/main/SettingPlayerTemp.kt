@@ -227,7 +227,7 @@ class SettingPlayerTemp : Listener {
             }
         }
 
-        if (e.player.vehicle?.type != EntityType.BOAT) {
+        if (e.player.vehicle?.type == EntityType.BOAT) {
             if (Main.random.nextInt(80) == 0) {
                 Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
             }
