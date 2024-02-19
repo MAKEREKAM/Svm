@@ -9,6 +9,7 @@ import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
+import org.bukkit.event.player.PlayerItemConsumeEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.ShapedRecipe
@@ -55,6 +56,15 @@ class Main : JavaPlugin(), Listener {
     fun onDeath(e : PlayerDeathEvent) {
         playerTemp[e.player.uniqueId] = 36.0
         playerFatigue[e.player.uniqueId] = 0.0
+    }
+
+    @EventHandler
+    fun onConsume(e : PlayerItemConsumeEvent) {
+        if (e.item.itemMeta != null) {
+            if (e.item.itemMeta!!.customModelData == 12345) {
+                playerTemp[e.player.uniqueId] = playerTemp[e.player.uniqueId]!! - 1.0
+            }
+        }
     }
 
     private fun settingRecipe() {
