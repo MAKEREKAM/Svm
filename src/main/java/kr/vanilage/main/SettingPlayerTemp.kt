@@ -172,8 +172,7 @@ class SettingPlayerTemp : Listener {
             arrayOf(
                 EntityType.HUSK,
                 EntityType.FIREBALL,
-                EntityType.SMALL_FIREBALL,
-                EntityType.CREEPER
+                EntityType.SMALL_FIREBALL
             )
 
         private val decreaseTempEntity =
@@ -184,13 +183,9 @@ class SettingPlayerTemp : Listener {
 
         private val randomDecreaseTempEntity =
             arrayOf(
-                EntityType.COD,
-                EntityType.SALMON,
-                EntityType.TROPICAL_FISH,
                 EntityType.ELDER_GUARDIAN,
                 EntityType.GUARDIAN,
                 EntityType.DOLPHIN,
-                EntityType.TURTLE,
                 EntityType.DROWNED
             )
 
