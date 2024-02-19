@@ -7,7 +7,9 @@ import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
 import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
+import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
+import org.bukkit.event.player.PlayerMoveEvent
 
 class SettingPlayerTemp : Listener {
     companion object {
@@ -215,5 +217,14 @@ class SettingPlayerTemp : Listener {
                 Biome.DEEP_DARK,
                 Biome.STONY_SHORE
             )
+    }
+
+    @EventHandler
+    fun onMove(e : PlayerMoveEvent) {
+        if (e.player.isSprinting) {
+            if (Main.random.nextInt(10) == 0) {
+                Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
+            }
+        }
     }
 }
