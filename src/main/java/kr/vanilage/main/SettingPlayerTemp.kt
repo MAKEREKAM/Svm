@@ -226,5 +226,11 @@ class SettingPlayerTemp : Listener {
                 Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
             }
         }
+
+        if (e.player.vehicle?.type != EntityType.BOAT) {
+            if (Main.random.nextInt(7) == 0) {
+                Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
+            }
+        }
     }
 }
