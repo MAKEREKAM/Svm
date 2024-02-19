@@ -52,7 +52,7 @@ class SettingPlayerTemp : Listener {
                                 }
 
                                 if (player.location.add(x.toDouble(), y.toDouble(), z.toDouble()).block.type == Material.WATER &&
-                                    player.vehicle?.type == EntityType.BOAT) {
+                                    player.vehicle?.type != EntityType.BOAT) {
                                     if (Main.random.nextInt(15) == 0) change -= 0.01
                                 }
                             }
