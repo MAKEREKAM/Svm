@@ -63,8 +63,10 @@ class Main : JavaPlugin(), Listener {
     @EventHandler
     fun onConsume(e : PlayerItemConsumeEvent) {
         if (e.item.itemMeta != null) {
-            if (e.item.itemMeta!!.customModelData == 12345) {
-                playerTemp[e.player.uniqueId] = playerTemp[e.player.uniqueId]!! - 1.0
+            if (e.item.itemMeta.hasCustomModelData()) {
+                if (e.item.itemMeta.customModelData == 12345) {
+                    playerTemp[e.player.uniqueId] = playerTemp[e.player.uniqueId]!! - 1.0
+                }
             }
         }
     }
