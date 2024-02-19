@@ -1,4 +1,4 @@
-name: KotlinPluginTemplate
+name: Svm
 version: 1.0 # 수정 가능
 main: kr.vanilage.main.Main
 api-version: '1.20' # 수정 가능
