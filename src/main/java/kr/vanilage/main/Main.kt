@@ -3,6 +3,7 @@ package kr.vanilage.main
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Bukkit
+import org.bukkit.Color
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.event.EventHandler
@@ -11,7 +12,10 @@ import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.ShapedRecipe
 import org.bukkit.inventory.ShapelessRecipe
+import org.bukkit.inventory.meta.PotionMeta
 import org.bukkit.plugin.java.JavaPlugin
+import org.bukkit.potion.PotionEffect
+import org.bukkit.potion.PotionEffectType
 import java.util.Random
 import java.util.UUID
 
@@ -47,16 +51,25 @@ class Main : JavaPlugin(), Listener {
     }
 
     private fun settingRecipe() {
-        val meta = potionItem.itemMeta
+        val meta = potionItem.itemMeta as PotionMeta
 
         meta.setCustomModelData(12345)
+
+        meta.color = Color.AQUA
+
+        meta.addCustomEffect(PotionEffect(
+            PotionEffectType.REGENERATION,
+            100, 2, false, false
+        ), true)
+
         meta.displayName(MiniMessage.miniMessage().deserialize(
-            "<red>해열제"
+            "<bold><red>해열제"
         ))
+
         meta.lore(
             mutableListOf(
                 MiniMessage.miniMessage().deserialize(
-                    "<yellow>마시면 온도가 1도 낮아집니다."
+                    "<bold><yellow>마시면 온도가 1도 낮아집니다."
                 )
             )
         )
