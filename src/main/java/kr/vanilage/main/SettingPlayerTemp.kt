@@ -9,6 +9,7 @@ import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
+import org.bukkit.event.block.BlockBreakEvent
 import org.bukkit.event.player.PlayerMoveEvent
 
 class SettingPlayerTemp : Listener {
@@ -229,6 +230,15 @@ class SettingPlayerTemp : Listener {
 
         if (e.player.vehicle?.type == EntityType.BOAT) {
             if (Main.random.nextInt(80) == 0) {
+                Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
+            }
+        }
+    }
+
+    @EventHandler
+    fun onBreak(e : BlockBreakEvent) {
+        if (e.block.isSolid) {
+            if (Main.random.nextInt(15) == 0) {
                 Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
             }
         }
