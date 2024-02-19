@@ -39,6 +39,7 @@ class Main : JavaPlugin(), Listener {
         settingRecipe()
 
         Bukkit.getPluginManager().registerEvents(SettingPlayerTemp(), this)
+        Bukkit.getPluginManager().registerEvents(SettingPlayerFatigue(), this)
         Bukkit.getPluginManager().registerEvents(this, this)
     }
 
