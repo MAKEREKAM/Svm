@@ -54,7 +54,7 @@ class SettingPlayerFatigue : Listener {
                     else {
                         bossBar.color = BarColor.GREEN
 
-                        player.walkSpeed = 2.0F
+                        player.walkSpeed = 0.2F
                     }
 
                     if (player.isOnline) Bukkit.getScheduler().runTaskLater(Main.instance, this, 1)
