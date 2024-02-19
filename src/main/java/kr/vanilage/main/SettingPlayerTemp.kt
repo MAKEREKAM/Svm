@@ -222,13 +222,13 @@ class SettingPlayerTemp : Listener {
     @EventHandler
     fun onMove(e : PlayerMoveEvent) {
         if (e.player.isSprinting) {
-            if (Main.random.nextInt(10) == 0) {
+            if (Main.random.nextInt(100) == 0) {
                 Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
             }
         }
 
         if (e.player.vehicle?.type != EntityType.BOAT) {
-            if (Main.random.nextInt(7) == 0) {
+            if (Main.random.nextInt(80) == 0) {
                 Main.playerTemp[e.player.uniqueId] = Main.playerTemp[e.player.uniqueId]!! + 0.1
             }
         }
